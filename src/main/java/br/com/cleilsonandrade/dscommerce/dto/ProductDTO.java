@@ -7,6 +7,7 @@ import br.com.cleilsonandrade.dscommerce.entities.Category;
 import br.com.cleilsonandrade.dscommerce.entities.Product;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
@@ -21,6 +22,7 @@ public class ProductDTO {
   @Size(min = 10, message = "Description must be at least 10 characters long")
   private String description;
 
+  @NotNull(message = "Field price needs to be filled in")
   @Positive(message = "The price must be positive")
   private Double price;
   private String imgUrl;
