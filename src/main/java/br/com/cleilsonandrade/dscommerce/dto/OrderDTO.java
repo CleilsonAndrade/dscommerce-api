@@ -6,6 +6,7 @@ import java.util.List;
 import br.com.cleilsonandrade.dscommerce.entities.Order;
 import br.com.cleilsonandrade.dscommerce.entities.OrderItem;
 import br.com.cleilsonandrade.dscommerce.entities.OrderStatus;
+import jakarta.validation.constraints.NotEmpty;
 
 public class OrderDTO {
   private Long id;
@@ -16,6 +17,7 @@ public class OrderDTO {
 
   private PaymentDTO payment;
 
+  @NotEmpty(message = "Must have at least one item")
   private List<OrderItemDTO> items;
 
   public OrderDTO(Long id, Instant moment, OrderStatus status, ClientDTO client, PaymentDTO payment) {
