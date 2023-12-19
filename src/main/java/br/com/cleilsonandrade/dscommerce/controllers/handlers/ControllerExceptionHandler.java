@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import br.com.cleilsonandrade.dscommerce.dto.CustomErrorDTO;
 import br.com.cleilsonandrade.dscommerce.dto.ValidationErrorDTO;
 import br.com.cleilsonandrade.dscommerce.services.exceptions.DatabaseException;
+import br.com.cleilsonandrade.dscommerce.services.exceptions.ForbiddenException;
 import br.com.cleilsonandrade.dscommerce.services.exceptions.ResourceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -44,6 +45,14 @@ public class ControllerExceptionHandler {
       err.addError(f.getField(), f.getDefaultMessage());
     }
 
+    return ResponseEntity.status(status).body(err);
+  }
+
+  @ExceptionHandler(ForbiddenException.class)
+  public ResponseEntity<CustomErrorDTO> forbidden(ForbiddenException e,
+      HttpServletRequest request) {
+    HttpStatus status = HttpStatus.FORBIDDEN;
+    CustomErrorDTO err = new CustomErrorDTO(Instant.now(), status.value(), e.getMessage(), request.getRequestURI());
     return ResponseEntity.status(status).body(err);
   }
 }
