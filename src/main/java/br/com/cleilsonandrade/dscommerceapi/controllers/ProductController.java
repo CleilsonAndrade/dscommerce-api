@@ -53,14 +53,14 @@ public class ProductController {
   }
 
   @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-  @PutMapping
+  @PutMapping("/{id}")
   public ResponseEntity<ProductDTO> update(@PathVariable Long id, @Valid @RequestBody ProductDTO dto) {
     dto = productService.update(id, dto);
     return ResponseEntity.ok(dto);
   }
 
   @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-  @DeleteMapping
+  @DeleteMapping("/{id}")
   public ResponseEntity<Void> delete(@PathVariable Long id) {
     productService.delete(id);
     return ResponseEntity.noContent().build();

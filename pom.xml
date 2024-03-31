@@ -11,7 +11,7 @@
 	<groupId>br.com.cleilsonandrade</groupId>
 	<artifactId>dscommerce-api</artifactId>
 	<version>1.0.0</version>
-	<name>dscommerce</name>
+	<name>DSCommerce API</name>
 	<description>DSCommerce API</description>
 	<properties>
 		<java.version>17</java.version>
