@@ -53,7 +53,7 @@ DSCommerce API é uma API robusta e versátil que atende às necessidades tanto 
 # 📍 <span id="endpoints">Endpoints</span>
 | Endpoint               | Resumo                                          | Autenticação
 |----------------------|-----------------------------------------------------|----------------------
-| <kbd>POST /oauth2/token </kbd> | Responsável por autenticar usuário e gerar o Bearer Token JWT. Utiliza o *Basic Auth* e o corpo de requisição do tipo *x-www-form-urlencoded* com as chaves: *username*, *password* e *grant_type* | Não
+| <kbd>POST /oauth2/token </kbd> | Responsável por autenticar usuário e gerar o Bearer Token JWT. Utiliza o *Basic Auth* e o corpo de requisição do tipo *x-www-form-urlencoded* com as chaves: *username*, *password* e *grant_type* | Sim
 | <kbd>GET /users/me </kbd> | Responsável por listar as informações do usuário que esta na sessão | ROLE_ADMIN, ROLE_CLIENT
 | <kbd>GET /products </kbd> | Responsável por listar todos os produtos | Não
 | <kbd>GET /products/:id </kbd> | Responsável por exibir um produto especifico por seu ID | Não
