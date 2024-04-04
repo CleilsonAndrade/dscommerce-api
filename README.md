@@ -72,7 +72,7 @@ DSCommerce API é uma API robusta e versátil que atende às necessidades tanto 
   $ cd ./dscommerce-api
 
   # Instalar as dependências:
-  $ mvn clean instal
+  $ mvn clean install
 
   # Executar:
   $ mvn spring-boot:run
