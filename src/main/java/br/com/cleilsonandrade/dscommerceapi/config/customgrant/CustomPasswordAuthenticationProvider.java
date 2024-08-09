@@ -120,9 +120,9 @@ public class CustomPasswordAuthenticationProvider implements AuthenticationProvi
 		OAuth2AccessToken accessToken = new OAuth2AccessToken(OAuth2AccessToken.TokenType.BEARER,
 				generatedAccessToken.getTokenValue(), generatedAccessToken.getIssuedAt(),
 				generatedAccessToken.getExpiresAt(), tokenContext.getAuthorizedScopes());
-		if (generatedAccessToken instanceof ClaimAccessor) {
+		if (generatedAccessToken instanceof ClaimAccessor accessor) {
 			authorizationBuilder.token(accessToken, (metadata) -> metadata.put(OAuth2Authorization.Token.CLAIMS_METADATA_NAME,
-					((ClaimAccessor) generatedAccessToken).getClaims()));
+					accessor.getClaims()));
 		} else {
 			authorizationBuilder.accessToken(accessToken);
 		}

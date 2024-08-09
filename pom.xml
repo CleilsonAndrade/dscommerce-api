@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.4</version>
+		<version>3.3.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.cleilsonandrade</groupId>
@@ -76,8 +76,7 @@
 		<plugins>
 			<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>3.1.0</version> <!--$NO-MVN-MAN-VER$ -->
+					<artifactId>maven-resources-plugin</artifactId> <!--$NO-MVN-MAN-VER$ -->
 				</plugin>
 
 			<plugin>
