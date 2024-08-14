@@ -1,7 +1,7 @@
 <div align="center">
   <h1>DSCommerce API</h1>
   <p>DSCommerce API é uma API robusta e versátil que atende às necessidades tanto de administradores quanto de clientes, para o gerenciamento de um sistema comercial. Oferece recursos como autenticação de usuário, perfis de usuário, gerenciamento de produtos com categorias, geração de ordem de compra e consulta. Foi utilizado o framework do Java o Spring, Spring Web, para gerenciamento do web server, Spring Data JPA para manipulação de informações dos bancos de dados MySQL e H2 Database. Para segurança e autenticação foi utilizado tecnologias como OAuth2 Resource Server, JWT e BCrypt.</p>
-  <img src="./references/flow.png" alt="Logo" width="1800">
+  <img src="./references/flow.png" alt="Flow" width="1800">
 </div>
 
 # 📒 Índice
