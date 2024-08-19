@@ -51,19 +51,19 @@ DSCommerce API é uma API robusta e versátil que atende às necessidades tanto 
 - **H2 Database**
 
 # 📍 <span id="endpoints">Endpoints</span>
-| Endpoint               | Resumo                                          | Autenticação               | Role
-|----------------------|-----------------------------------------------------|--------------------------|----------------------
-| <kbd>POST /oauth2/token </kbd> | Responsável por autenticar usuário e gerar o Bearer Token JWT. Utiliza o *Basic Auth* e o corpo de requisição do tipo *x-www-form-urlencoded* com as chaves: *username*, *password* e *grant_type* | Sim | *
-| <kbd>GET /users/me </kbd> | Responsável por listar as informações do usuário que esta na sessão | Sim | ROLE_ADMIN, ROLE_CLIENT
-| <kbd>GET /products </kbd> | Responsável por listar todos os produtos | Não | *
-| <kbd>GET /products/:id </kbd> | Responsável por exibir um produto especifico por seu ID | Não | *
-| <kbd>POST /products </kbd> | Responsável por cadastrar um produto | Sim | ROLE_ADMIN
-| <kbd>PUT /products/:id </kbd> | Responsável por atualizar um produto, informando o ID no Path e via corpo de requisição as informações | Sim | ROLE_ADMIN
-| <kbd>PUT /products/:id </kbd> | Responsável por deletar um produto, informando o ID no Path | Sim | ROLE_ADMIN
-| <kbd>GET /categories </kbd> | Responsável por listar todos as categorias | Não | *
-| <kbd>POST /orders </kbd> | Responsável por gerar uma ordem de uma compra | Sim | ROLE_CLIENT
-| <kbd>GET /orders/:id </kbd> | Responsável por listar os produtos na ordem de uma compra especifica e seu status, informando o ID | Sim | ROLE_ADMIN, ROLE_CLIENT
-| <kbd>GET /h2-console </kbd> | Responsável por acesso ao *H2 Database* | Sim | *
+| Método | Endpoint               | Resumo                                          | Autenticação               | Role
+|--------|----------------------|-----------------------------------------------------|--------------------------|----------------------
+<kbd>POST</kbd> | <kbd>/oauth2/token</kbd> | Responsável por autenticar usuário e gerar o Bearer Token JWT. Utiliza o *Basic Auth* e o corpo de requisição do tipo *x-www-form-urlencoded* com as chaves: *username*, *password* e *grant_type* | Sim | *
+<kbd>GET</kbd> | <kbd>/users/me</kbd> | Responsável por listar as informações do usuário que esta na sessão | Sim | ROLE_ADMIN, ROLE_CLIENT
+<kbd>GET</kbd> | <kbd>/products</kbd> | Responsável por listar todos os produtos | Não | *
+<kbd>GET</kbd> | <kbd>/products/:id</kbd> | Responsável por exibir um produto especifico por seu ID | Não | *
+<kbd>POST</kbd> | <kbd>/products</kbd> | Responsável por cadastrar um produto | Sim | ROLE_ADMIN
+<kbd>PUT</kbd> | <kbd>/products/:id</kbd> | Responsável por atualizar um produto, informando o ID no Path e via corpo de requisição as informações | Sim | ROLE_ADMIN
+<kbd>PUT</kbd> | <kbd>PUT /products/:id</kbd> | Responsável por deletar um produto, informando o ID no Path | Sim | ROLE_ADMIN
+<kbd>GET</kbd> | <kbd>/categories</kbd> | Responsável por listar todos as categorias | Não | *
+<kbd>POST</kbd> | <kbd>/orders</kbd> | Responsável por gerar uma ordem de uma compra | Sim | ROLE_CLIENT
+<kbd>GET</kbd> | <kbd>/orders/:id</kbd> | Responsável por listar os produtos na ordem de uma compra especifica e seu status, informando o ID | Sim | ROLE_ADMIN, ROLE_CLIENT
+<kbd>GET</kbd> | <kbd>/h2-console</kbd> | Responsável por acesso ao *H2 Database* | Sim | *
 
 # 🚀 <span id="instalação">Instalação</span>
 ```bash
